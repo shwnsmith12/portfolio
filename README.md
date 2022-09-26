@@ -10,3 +10,4 @@ The idea behind this application is to create a personalized profile for myself 
 
 <h3>Image of Mock Up</h3>
 
+![Portfolio](https://user-images.githubusercontent.com/110200047/192394598-d36406ac-de7c-4152-afeb-d2ea2351dcfe.jpeg)
