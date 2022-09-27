@@ -8,10 +8,16 @@ body {
   line-height: 1.3;
 }
 
+/*I'm not much of stylist, but I wanted to show I knew how to setup the linear gradient, I made the "billboard' space 250px so you could see a more
+gradual gradient*/
+
 .billboard {
   height: 250px;
   background-image: linear-gradient(black,white);
 }
+
+/*Added an image of myself with my dog Beau, as the requirement was to have a picture of yourself. Couldn't figure out how to center it with the other
+content on the page*/
 
 .billboard img {
   position: absolute;
@@ -42,7 +48,8 @@ h2 {
   font-size: 180%;
   text-align: center;
 }
-
+ /* The below section should be just for the Navigation bars. The should create space between each element, the font should be fairly bolded
+ and the items should be underlined. When the mouse hovers over the text should turn white (#fff)*/
 
 nav ul {
   display: flex;
@@ -63,6 +70,11 @@ nav a:hover {
 #about_me img {
   border-radius: 10px;
 }
+
+/* The card section below is maybe not perfect, but useable in this sense. I wanted to make sure that the images uses in the flippable cards were 
+all slightly rounded, and that the borders for each card were as well. I did make the background black because there was a slight overage of
+white on the corners that I didn't know how to fix. These cards should flip over with a transition rate of 1.8seconds per turn, and reveal a different
+image than the front of the card, as well as some text with specific items 'About Me'*/
 
 .cards {
   display: flex;
@@ -112,6 +124,9 @@ nav a:hover {
   transform: rotateY(180deg);
 }
 
+/* I wasn't sure if I had to do separate selectors for each card back, but I figured since they were all separate images on the back it needed to be
+done as below*/
+
 #cardback1 {
   background-image: url(../images/Austin-Skyline.jpg);
 }
@@ -127,6 +142,15 @@ nav a:hover {
 #cardback4 {
   background-image: url(../images/Coding.jpeg);
 }
+
+/* This was definitely tricky here. I was trying to make a similar setup to the gif provided, but with some slight personal changes. I was able to
+get the 'Surf Report' title on the image where I wanted it, but when trying to adjust anything else for the other cards below it would mess up the whole
+position of everything. I wasn't sure how to make them each card its own individual item.
+
+This is also where I got stuck with the 2 column (or aside?). I wanted the 'About Me' and 'My Projects' to be to the left side of the screen. I tried a float
+at one point, and got them aligned left with content to the right, but couldn't figure out how to get each 'section' to align - so the 'About Me' and
+'My Projects' just sat right next to each other. Since I wanted to submit the homework with at least something useable I changed it to it's current
+layout as of 9/26/22*/
 
 .container {
   background: transparent;
@@ -150,6 +174,8 @@ nav a:hover {
   transform: translate(-50%, -50%);
 }
 
+/*I believe the below selector is what is making the first picture larger than the rest*/
+
 .container :first-child {
   width: 100%;
 }
@@ -167,6 +193,8 @@ nav a:hover {
   flex-basis: 25%;
 }
 
+/*I wanted to add a style element to the pictures when hovered over. I found a few different ones, but I liked how this one worked/looked the most*/
+
 .fadein img{
   opacity:0.5;
   transition: 1s ease;
@@ -179,7 +207,7 @@ nav a:hover {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   line-height: 10px;
   background-color: #000000;
@@ -187,11 +215,17 @@ footer {
   padding-right: 2%;
   }
 
+/*I definitely need to go back to the @media screen section and brush up. I know that below I was able to get the header/footer to change colors,
+as well as the billboard to stay consistent, but I didn't get the flex boxes to align the way I wanted, and the footer just kind of stacks
+on top of itself when smushed.*/
+
+
 @media screen and (max-width: 768px) {
   main,
   nav {
     flex-direction: column;
     flex-wrap: wrap;
+    width: 50%;
   }
   
   header {
